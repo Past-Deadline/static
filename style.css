@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   background-color: #0e0e0e;
@@ -128,6 +129,149 @@ body {
 }
 .users-wrap .users .user-card:hover {
   background-color: #6a0dad;
+}
+
+.individuals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.individuals span {
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: green;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+}
+.individuals section {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  padding: 2rem;
+}
+.individuals section ul {
+  text-align: left;
+  padding: 0 1.5rem;
+}
+.individuals section ul li {
+  margin: 0.5rem 0;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: #ffffff;
+}
+.individuals section ul li::marker {
+  color: #6a0dad;
+  width: 0.5rem;
+  content: "⏺";
+  font-size: 1rem;
+  vertical-align: bottom;
+  border-radius: 50%;
+}
+.individuals section button {
+  background: #6a0dad;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.individuals section button:hover {
+  background-color: #ffffff;
+  color: #6a0dad;
+  border-color: #6a0dad;
+}
+.individuals section:last-child ul li::marker {
+  color: gold;
+}
+.individuals section:last-child ul .purple-text {
+  color: gold;
+  font-weight: 300;
+}
+.individuals section:last-child button {
+  background: gold;
+  color: #0e0e0e;
+  transition: all 0.3s ease-in-out;
+}
+.individuals section:last-child button:hover {
+  background-color: rgb(165, 141, 0);
+}
+
+.big {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 75%;
+  margin: auto auto 4rem auto;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  padding: 2rem;
+}
+.big ul {
+  text-align: left;
+  padding: 0 1.5rem;
+}
+.big ul li {
+  margin: 0.5rem 0;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: #ffffff;
+}
+.big ul li::marker {
+  color: #6a0dad;
+  width: 0.5rem;
+  content: "⏺";
+  font-size: 1rem;
+  vertical-align: bottom;
+  border-radius: 50%;
+}
+.big button {
+  background: #6a0dad;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin: auto;
+}
+.big button:hover {
+  background-color: #ffffff;
+  color: #6a0dad;
+  border-color: #6a0dad;
+}
+
+footer {
+  margin: 2rem auto;
+}
+footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer .logo img {
+  width: 60px;
+  height: auto;
+}
+footer .logo h2 {
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=style.css.map */
