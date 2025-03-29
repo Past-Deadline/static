@@ -32,12 +32,35 @@ body {
   position: absolute;
   top: 0;
 }
-.hero header img {
+.hero header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero header .logo img {
   width: 60px;
   height: auto;
 }
-.hero header h2 {
+.hero header .logo h2 {
   font-weight: 200;
+}
+.hero header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.hero header nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 200;
+  transition: all 0.3s ease-in-out;
+}
+.hero header nav ul a:hover {
+  background-color: #6a0dad;
+  border-color: #6a0dad;
 }
 .hero::before {
   content: "";
