@@ -45,6 +45,11 @@ body {
 .hero header .logo h2 {
   font-weight: 200;
 }
+.hero header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .hero header nav ul {
   display: flex;
   gap: 20px;
@@ -63,6 +68,23 @@ body {
   background-color: #6a0dad;
   border-color: #6a0dad;
 }
+.hero header nav .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hero header nav .hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.hero header nav.active ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -71,7 +93,7 @@ body {
   width: 100%;
   height: 100%;
   background: url("./img/hero.png") center/cover no-repeat;
-  filter: blur(8px);
+  filter: blur(15px) brightness(0.7);
   z-index: 0;
 }
 .hero h1,
@@ -141,10 +163,11 @@ body {
 .individuals span {
   font-size: 1.2rem;
   color: #ffffff;
-  background-color: green;
-  padding: 0.5rem;
+  background-color: #6a0dad;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: 15px;
+  font-weight: bold;
 }
 .individuals section {
   background: rgba(0, 0, 0, 0.7);
@@ -154,6 +177,10 @@ body {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .individuals section ul {
   text-align: left;
@@ -161,9 +188,9 @@ body {
 }
 .individuals section ul li {
   margin: 0.5rem 0;
-  font-weight: 200;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
   color: #ffffff;
 }
 .individuals section ul li::marker {
@@ -178,7 +205,7 @@ body {
   background: #6a0dad;
   border: none;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 10px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
@@ -188,6 +215,12 @@ body {
   background-color: #ffffff;
   color: #6a0dad;
   border-color: #6a0dad;
+}
+.individuals section img {
+  width: 300px;
+  margin: 2rem 0;
+  border: 5px solid white;
+  border-radius: 15px;
 }
 .individuals section:last-child ul li::marker {
   color: gold;
@@ -199,10 +232,75 @@ body {
 .individuals section:last-child button {
   background: gold;
   color: #0e0e0e;
+  padding: 12px 24px;
   transition: all 0.3s ease-in-out;
 }
 .individuals section:last-child button:hover {
   background-color: rgb(165, 141, 0);
+}
+
+.education {
+  position: relative;
+  background-image: url(./img/education.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  z-index: 0;
+}
+.education:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(8px) brightness(0.7);
+  z-index: -1;
+}
+.education h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  z-index: 1;
+}
+
+.enterprise {
+  position: relative;
+  background-image: url(./img/enterprise.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  z-index: 0;
+}
+.enterprise:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(8px) brightness(0.7);
+  z-index: -1;
+}
+.enterprise h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  z-index: 1;
 }
 
 .big {
@@ -213,13 +311,13 @@ body {
   gap: 2rem;
   max-width: 75%;
   margin: auto auto 4rem auto;
-  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
   padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .big ul {
   text-align: left;
@@ -227,9 +325,9 @@ body {
 }
 .big ul li {
   margin: 0.5rem 0;
-  font-weight: 200;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
   color: #ffffff;
 }
 .big ul li::marker {
@@ -244,7 +342,7 @@ body {
   background: #6a0dad;
   border: none;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 10px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
@@ -272,6 +370,43 @@ footer .logo img {
 }
 footer .logo h2 {
   font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .users {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .individuals {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .big {
+    max-width: 90%;
+  }
+  .hero header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    background-color: #0e0e0e;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .hero header nav ul li {
+    margin: 0.5rem 0;
+  }
+  .hero header nav .hamburger {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

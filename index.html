@@ -14,11 +14,16 @@
           <img src="./img/spaceguard-logo.png" alt="" srcset="" />
           <h2>SpaceGuard</h2>
         </div>
-        <nav>
+        <nav class="nav" id="nav">
           <ul>
             <li><a href="/">Heat Map Demo</a></li>
             <li><a href="/">SatScheduler Demo</a></li>
           </ul>
+          <div class="hamburger" onclick="hamburger()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </nav>
       </header>
       <h1>stellar safety in cosmic debris</h1>
@@ -64,7 +69,7 @@
             <li>Useful to know when to observe the night sky</li>
           </ul>
           <button>EXPLORE THE SPACE DEBRIS</button>
-          <img src="" alt="enthusiasts" />
+          <img src="./img/individual.png" alt="enthusiasts" />
         </section>
         <section>
           <h2>Individual+ Plan</h2>
@@ -81,7 +86,7 @@
             </li>
           </ul>
           <button>SIGN UP FOR ONLY $4.99 / MONTH!</button>
-          <img src="" alt="enthusiasts+" />
+          <img src="./img/individual_plus.png" alt="enthusiasts+" />
         </section>
       </section>
       <section class="education big">
@@ -91,8 +96,9 @@
           <li>Unlimited Heat Map access</li>
           <li>Great for space science students in universities!</li>
         </ul>
-        <button>CONTACT US</button>
-        <img src="" alt="education" />
+        <section class="button">
+          <button>CONTACT US</button>
+        </section>
       </section>
       <section class="enterprise big">
         <h2>Enterprise Plan</h2>
@@ -101,8 +107,9 @@
           <li>Unlimited Heat Map access</li>
           <li>Full usage of ground-breaking SatScheduler System!</li>
         </ul>
-        <button>CONTACT US</button>
-        <img src="" alt="enterprise" />
+        <section class="button">
+          <button>CONTACT US</button>
+        </section>
       </section>
     </main>
     <footer>
@@ -112,5 +119,7 @@
         <p>&copy; 2025</p>
       </div>
     </footer>
+
+    <script src="./hamburger.js"></script>
   </body>
 </html>
